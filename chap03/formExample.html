@@ -1,0 +1,79 @@
+<!--
+<form> </form> : 폼(양식)을 정의
+    <method> : 폼 데이터를 서버로 전송할 때 사용할 HTTP 메서드 (예: GET, POST)
+    <action> : 폼 데이터를 전송할 서버의 URL 지정
+<fieldset> </fieldset> : 관련된 입력 필드들을 그룹화
+    <legend> </legend> : fieldset의 제목을 정의
+<input> : 사용자로부터 데이터를 입력받기 위한 다양한 형태의 입력 필드를 정의
+    <label> </label> : 입력 필드에 대한 설명을 정의 
+    <type> : 입력 필드의 유형을 지정 (예: text, password, email, number, date, checkbox, radio, submit 등)
+    <name> : 입력 필드의 이름을 지정 (서버로 전송될 때 사용)
+    <id> : 입력 필드의 고유 식별자 지정 (label과 연결할 때 사용)
+    <placeholder> : 입력 필드에 힌트 텍스트를 표시
+    <required> : 필수 입력 필드로 지정
+    <value> : 입력 필드의 초기값을 지정
+<select> </select> : 드롭다운 목록을 정의
+    <option> </option> : select 요소 내에서 선택 가능한 옵션을 정의
+        <value> : 옵션의 값을 지정
+        <selected> : 기본 선택된 옵션으로 지정
+        <disabled> : 옵션을 비활성화
+    <optgroup> </optgroup> : 옵션들을 그룹화
+    <size> : 한 번에 표시할 옵션의 개수를 지정
+    <multiple> : 여러 옵션을 선택할 수 있도록 지정
+<textarea> </textarea> : 여러 줄의 텍스트 입력 필드를 정의
+    <rows> : textarea의 행 수를 지정
+    <cols> : textarea의 열 수를 지정
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="GET" action="http://example.com/addresscheck.html">
+        <fieldset>
+            <legend>폼 영역</legend>
+            <label for="username">이름 </label>
+            <input type="text" name="username" id="username" placeholder="이름을 입력하세요" required />
+            <br />
+            <label> 비밀번호
+                <input type="password" name="password" placeholder="비밀번호를 입력하세요" required />
+            </label>
+            <!-- <br /> -->
+            <!-- <label> 전화번호
+                <input type="tel" name="tel" placeholder="전화번호를 입력하세요" required />
+            </label> -->
+            <br />
+            <input type="file"/>
+            <br />
+            행사참가:
+            <!-- name 속성으로 그룹화-->
+            <input type="radio" name="attendance" value="yes">참가</input> 
+            <input type="radio" name="attendance" value="no">불참</input>
+            <br />
+            날짜:
+            <input type="week"></input>
+            <br />
+            나이:
+            <!-- <input type="range" name="age" min="19" max="65" step="1" value="20"></input> -->
+            <select name="age">
+                <option value="19-25">19-25</option>
+                <option value="26-35">26-35</option>
+                <option value="36-45">36-45</option>
+                <option value="46-55">46-55</option>
+                <option value="56-65">56-65</option>
+            </select>
+            <br />
+            <br />
+            <textarea rows="4" cols="30" placeholder="리뷰를 남겨주세요!"></textarea>
+            <br />
+            <br />
+            <br />
+            <input type="submit" value="제출" />
+            <input type="reset" value="초기화" />
+        </fieldset>
+</body>
+</html>

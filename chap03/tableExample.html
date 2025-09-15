@@ -1,0 +1,80 @@
+<!--
+<table> </table> : 표를 정의
+    <thead> </thead> : 표의 머리글(헤더) 영역을 정의
+    <tbody> </tbody> : 표의 본문 영역을 정의
+    <tr> </tr> : 표의 행(row)을 정의 (행은 가로)
+    <th> </th> : 표의 머리글(헤더) 셀을 정의 (표의 제목 셀)
+    <td> </td> : 표의 데이터 셀을 정의 (표의 본문 셀)
+    <caption> </caption> : 표의 제목을 정의
+<colgroup> </colgroup> : 표의 열 그룹을 정의
+<col> </col> : 표의 열을 정의
+<span> : 열이나 행이 몇 개의 셀에 걸쳐 있는지 정의
+<rowspan> : 행이 몇 개의 셀에 걸쳐 있는지 정의
+<colspan> : 열이 몇 개의 셀에 걸쳐 있는지 정의
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <caption>학생 성적표</caption>
+        <colgroup>
+            <!-- col의 요소들은 순차적으로 적용되며, 이전 col의 범위가 끝난 다음부터 시작. -->
+            <col style="background-color: #ff1010" span="1" />
+            <col style="background-color: #02f222" span="3" />        
+        </colgroup>
+        <thead>
+            <tr>
+                <th>순서</th>
+                <th>이름</th>
+                <th>과목</th>
+                <th>점수</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>1</th>
+                <td>김철수</td>
+                <td>수학</td>
+                <td>90</td>
+            </tr>
+            <tr>
+                <th>2</th>
+                <td>이영희</td>
+                <td>영어</td>
+                <td>85</td>
+            </tr>
+        </tbody>
+    </table>
+    <table border="1">
+        <caption>학생 정보표</caption>
+        <thead>
+            <tr>
+                <th rowspan="2" colspan="2">학생 정보</th>
+                <th colspan="3">성적</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="col">국어</th>
+                <th>영어</th>
+                <td>수학</td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr>
+                <th>이순신</th>
+                <td>90</td>
+                <td>25</td>
+                <td>100</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
+
+
