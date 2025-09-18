@@ -1,0 +1,73 @@
+<!-- 
+    시맨틱이란?
+    - HTML5에서 도입된 개념
+    - 태그가 그 의미를 명확히 나타냄
+    - 검색 엔진 최적화(SEO)에 도움
+    - 접근성 향상
+    - 유지보수 용이
+    - 예: <header>, <section>, <article>, <nav>, <footer> 등
+    - 시맨틱 태그는 id, class 속성으로 스타일링 가능
+    <header>이란?
+    - 문서의 머리말 역할
+    - 주로 제목, 로고, 내비게이션 메뉴 포함
+    - 시맨틱 태그
+    - id, class 속성으로 스타일링 가능
+    <secton>이란?
+    - 문서의 구획을 나누는 역할
+    - header, footer, article, nav, aside 등과 함께 사용
+    - 시맨틱 태그
+    - id, class 속성으로 스타일링 가능
+    - 여러 개의 section 태그를 사용할 수 있음
+    <nav>이란?
+    - 내비게이션(메뉴) 역할
+    - 주로 링크 목록을 포함
+    - 시맨틱 태그
+    - id, class 속성으로 스타일링 가능
+    - 여러 개의 nav 태그를 사용할 수 있음
+    <article>이란?
+    - 독립적인 콘텐츠 블록
+    - 블로그 글, 뉴스 기사 등에 사용
+    - 시맨틱 태그
+    - id, class 속성으로 스타일링 가능
+    - 여러 개의 article 태그를 사용할 수 있음
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./selector.css" />
+  </head>
+  <body>
+    <header>
+      <h1>CSS Selector 실습</h1>
+      <nav>
+        <ul>
+          <li><a href="#intro">메뉴 1</a></li>
+          <li><a href="#footer">메뉴 2</a></li>
+          <li><a href="#">메뉴 3</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+        <section id="intro">
+            <h2>소개</h2>
+            <p class="text-block">이 문단은 일반적인 텍스트 블록입니다.</p>
+            <p class="text-block highlight">이 문단은 <span>하이라이트</span>된 중요한 내용입니다.</p>
+        </section>
+        <section class="content">
+            <h2>내용</h2>
+            <article>
+                <h3>첫 번째 글</h3>
+                <p>이 글은 첫 번째 글입니다.</p>
+                <button>클릭하세요.</button>
+            </article>
+            <article class="special">
+                <h3>두 번째 글(특별)</h3>
+                <p>이 글은 두 번째 글입니다.</p>
+            </article>
+    </main>
+  </body>
+</html>

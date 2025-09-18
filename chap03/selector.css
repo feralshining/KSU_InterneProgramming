@@ -1,0 +1,30 @@
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  margin: 0px;
+  padding: 0px;
+  background-color: #f4f4f4;
+}
+
+h1,
+h2,
+h3 {
+  color: #333;
+}
+
+.text-block {
+  margin-bottom: 10px;
+}
+
+.highlight {
+  background-color: #ffe0b2;
+  pdding: 5px 10px;
+  border-radius: 3px;
+  border: 1px solid #ffcc80;
+}
+
+#intro {
+  background-color: #e0f7fa;
+  padding: 20px;
+  text-align: center;
+}

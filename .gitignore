@@ -1,6 +1,6 @@
 # trash files
 .vscode
 .corgi.png
-.image1.jpg
-.image2.jpg
-.image3.jpg
+
+# configuration files
+.prettierrc
