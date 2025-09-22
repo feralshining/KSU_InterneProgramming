@@ -1,0 +1,25 @@
+.flexbox {
+  display: flex;
+  margin-top: 50px;
+  width: 500px;
+  flex-direction: row;
+  flex-wrap: nowrap; /*prevent flex items from wrapping */
+}
+.flexChildren {
+  background-color: black;
+  color: white;
+}
+.flex1 {
+  background-color: red;
+  width: 100px;
+  flex-grow: 4;
+  height: 100px;
+}
+.flex2 {
+  background-color: green;
+  flex-grow: 2;
+}
+.flex3 {
+  background-color: blue;
+  flex-grow: 3;
+}
