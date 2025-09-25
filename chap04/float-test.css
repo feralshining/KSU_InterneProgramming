@@ -1,0 +1,31 @@
+/*
+  . => class
+  # => id
+  div => element
+*/
+
+#box_a {
+  float: left;
+  width: 60px;
+  height: 4px;
+  margin: 20px;
+  padding: 20px;
+}
+
+#box_b {
+  float: left;
+  width: 60px;
+  height: 4px;
+  margin: 20px;
+  padding: 20px;
+}
+
+div.items {
+  float: left;
+  width: 100px;
+  height: 60px;
+}
+
+.clear {
+  clear: both;
+}

@@ -1,0 +1,42 @@
+/*
+    inline: 인라인 요소는 요소의 크기가 내용물에 의해 결정되고, 요소가 차지하는 공간이 가로 방향으로만 확장됨
+    block: 블록 요소는 요소의 크기가 부모 요소의 너비에 맞춰지고, 요소가 차지하는 공간이 가로와 세로 방향으로 모두 확장됨
+    inline-block : 인라인 요소처럼 취급하면서 블록 요소의 성질도 가짐
+    float : 요소를 왼쪽이나 오른쪽으로 띄워서 배치
+    flex : 컨테이너 안의 아이템들을 가로 또는 세로로 정렬·배치하는데에 사용
+*/
+
+#logo {
+  float: left;
+  margin: 10px;
+}
+
+#header {
+  margin: 10px;
+  padding: 10px;
+  width: 1000px;
+  header: 100px;
+  display: flex;
+}
+
+.main-menu {
+  display: inline-block;
+  margin: 30px;
+  padding: 30px;
+  height: 100px;
+  background-color: lightgray;
+}
+
+.sub-menu {
+  clear: both;
+  margin: 30px;
+  padding: 30px;
+  height: 100px;
+  /* background-color: lightskyblue; */
+}
+
+.items {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+}
