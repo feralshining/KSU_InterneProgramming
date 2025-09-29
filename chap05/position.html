@@ -1,0 +1,103 @@
+<!--
+    position: static (기본값)
+    - 요소가 문서 흐름에 따라 배치됨
+    - top, bottom, left, right 속성 무시됨
+    position: relative
+    - 요소가 문서 흐름에 따라 배치됨
+    - top, bottom, left, right 속성 적용됨
+    - 요소의 원래 위치를 기준으로 이동
+    position: absolute
+    - 요소가 문서 흐름에서 제거됨
+    - 가장 가까운 위치 지정 조상 요소를 기준으로 배치됨
+    - 위치 지정 조상 요소가 없으면 초기 컨테이너(body)를 기준으로 배치됨
+    - top, bottom, left, right 속성 적용됨
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .static-box{
+            width: 150px;
+            height: 100px;
+            background-color: lightblue;
+            margin: 10px;
+            position: static;
+        }
+        .relative-box{
+            width: 150px;
+            height: 100px;
+            background-color: lightgreen;
+            margin: 10px;
+            position: relative;
+            top: 20px;
+            left: 30px;
+            right: 30px;
+        }
+        .parent-box{
+            position: relative;
+            width: 300px;
+            height: 200px;
+            margin: 10px;
+            background-color: lightgray;
+        }
+        .absolute-box{
+            position: absolute;
+            display: flex;
+            top: 50px;
+            left: 50px;
+            width: 100px;
+            height: 50px;
+            background-color: lightcoral;
+            justify-content: center;
+            align-items: center;
+        }
+        .fixed-box{
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 120px;
+            height: 60px;
+            background-color: lightseagreen;
+            color: white;
+            display: flex;
+            justify-content: right;    
+            align-items: end;
+            font-weight: bold;
+        }
+        .content {
+            height: 1500px;
+            background: linear-gradient(#fff, #aaa);
+        }
+        .sticky-box{
+            position: sticky;
+            top: 20px;
+            background-color: lightsalmon;
+            padding: 10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        </style>
+</head>
+<body>
+    <h2>position: static</h2>
+    <div class="static-box">Static Box1</div>
+    <div class="static-box">Static Box2</div>
+    <h2>position: relative</h2>
+    <div class="relative-box">Relative Box1</div>
+    <div class="relative-box">Relative Box2</div>
+    <h2>position: absolute</h2>
+    <div class="parent-box">
+        <div class="absolute-box">Absolute Box1</div>
+        <div class="absolute-box" style="top: 120px; left: 150px">Absolute Box2</div>
+    </div>
+    <h2>position: fixed</h2>
+    <div class="content">스크롤을 내려보세요</div>
+    <div class="fixed-box">Fixed Box</div>
+    <h2>position: sticky</h2>
+    <div class="content">스크롤을 내려보세요</div>
+    <div class="sticky-box">Sticky Box</div>
+</body>
+</html>
